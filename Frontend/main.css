@@ -1,0 +1,134 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    line-height: 1.6;
+    color: #333;
+    padding: 2rem;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Page Title */
+.page-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+    font-size: 2.5rem;
+}
+
+/* Card Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Card Styles */
+.card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+/* Card Header */
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.card-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+/* Icon Colors */
+.math-icon { background-color: #3498db; color: white; }
+.science-icon { background-color: #2ecc71; color: white; }
+.cs-icon { background-color: #9b59b6; color: white; }
+
+.card-title {
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.card-description {
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+.card-button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.math-button {
+    background-color: #3498db;
+}
+
+.math-button:hover {
+    background-color: #2980b9;
+}
+
+.science-button {
+    background-color: #2ecc71;
+}
+
+.science-button:hover {
+    background-color: #27ae60;
+}
+
+.cs-button {
+    background-color: #9b59b6;
+}
+
+.cs-button:hover {
+    background-color: #8e44ad;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
